@@ -4,6 +4,8 @@
   "description": "curso de tdd com js",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/douglasdcm/js-tdd-course/issues"
   },
-  "homepage": "https://github.com/douglasdcm/js-tdd-course#readme"
+  "homepage": "https://github.com/douglasdcm/js-tdd-course#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.3.0"
+  }
 }
