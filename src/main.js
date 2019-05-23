@@ -5,5 +5,4 @@ const d = b + a
 print (c)
 print (d)
 
-const e
 
