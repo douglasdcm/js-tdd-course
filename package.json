@@ -1,0 +1,24 @@
+{
+  "name": "js-tdd-course",
+  "version": "1.0.0",
+  "description": "curso de tdd com js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglasdcm/js-tdd-course.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Douglas Cardoso <douglas.dcm@gmail.com> (https://www.youtube.com/watch?v=Pil3peOmul8)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/douglasdcm/js-tdd-course/issues"
+  },
+  "homepage": "https://github.com/douglasdcm/js-tdd-course#readme"
+}
