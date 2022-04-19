@@ -1,31 +1,35 @@
 {
-  "name": "js-tdd-course",
+  "name": "tdd",
   "version": "1.0.0",
-  "description": "curso de tdd com js",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepush": "npm run lint && npm run testcov",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "testtdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "testcov": "nyc npm test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/douglasdcm/js-tdd-course.git"
+  "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
-  "keywords": [
-    "js",
-    "tdd",
-    "library"
-  ],
-  "author": "Douglas Cardoso <douglas.dcm@gmail.com> (https://www.youtube.com/watch?v=Pil3peOmul8)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/douglasdcm/js-tdd-course/issues"
-  },
-  "homepage": "https://github.com/douglasdcm/js-tdd-course#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.13.0",
-    "husky": "^2.3.0"
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.3.6",
+    "mocha": "^9.2.1",
+    "nyc": "^15.1.0"
   }
 }
