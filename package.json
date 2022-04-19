@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run lint && npm run testcov",
+    "prepush": "npm run testcov",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
     "testtdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
     "testcov": "nyc npm test"
